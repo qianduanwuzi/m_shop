@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+
+<head>
+  {{ HEAD }}
+</head>
+
+<body {{ BODY_ATTRS }}>
+  {{ APP }}
+
+  <script>
+  //   (function (doc, win) {
+  //   var docEl = doc.documentElement,
+  //     resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+  //     recalc = function () {
+  //       var clientWidth = docEl.clientWidth;
+  //       if (!clientWidth) return;
+  //       docEl.style.fontSize = clientWidth / 3.75 + 'px';
+  //     };
+  //   if (!doc.addEventListener) return;
+  //   win.addEventListener(resizeEvt, recalc, false);
+  //   doc.addEventListener('DOMContentLoaded', recalc, false);
+  // })(document, window);
+
+    var scale = 1 / window.devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width,initial-scale=' +
+      scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    // 字体自适应html（rem）
+    //--基准以750像素计算 
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+/*页面切换fade效果*/
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-active {
+  opacity: 0;
+}
+
+/*全局样式*/
+html, body {
+  font-family: "Microsoft YaHei" ! important;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  width: 100%;
+}
+
+body{
+  font-size: .2rem;
+}
+
+
+*{
+  -webkit-text-size-adjust: none;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #aaa;
+}
+
+img{
+  width: 100%;
+  display: block;
+}
+
