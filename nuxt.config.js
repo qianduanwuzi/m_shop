@@ -40,7 +40,9 @@ module.exports = {
     // }
   },
   plugins: [
-    { src: '~plugins/plugin'},
-    { src: '~plugins/vant' }
+    { src: '~plugins/fastclick', ssr: false},
+    // { src: '~plugins/pickers', ssr: false},
+    { src: '~plugins/components'},
+    { src: '~plugins/vant'},
   ]
 }
