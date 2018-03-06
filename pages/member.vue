@@ -1,6 +1,6 @@
 <template>
     <div>
-       this is news root页
+       this is member页
        <!--child views-->
        <div>---child views---</div>
       <nuxt-child/>
@@ -42,5 +42,7 @@ export default {
 </script>
 
 <style>
+
+
 
 </style>

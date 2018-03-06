@@ -19,6 +19,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "fastclick": "^1.0.6",
     "node-sass": "^4.7.2",
     "nuxt": "^1.0.0",
