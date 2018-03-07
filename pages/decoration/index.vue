@@ -1,22 +1,26 @@
 <template>
     <div>
         <top-nav title="新房整装"></top-nav>
-        <card v-for="(one, index) in data" :key="index">
-            <img :src="one.url" alt="">
-            <div class="detail">
-                <van-row class="flex">
-                    <van-col :span="20" class="title">[特权定金]{{one.title}}</van-col>
-                    <van-col :span="4" class="comment">评论{{one.commentNum}}</van-col>
-                </van-row>
-                <div :class="['flex', 'zhekou']" style="text-align: right;">
-                    <span class="realIcon">￥</span>
-                    <span class="real">{{one.real || 1000}}</span>
-                    <span style="margin-left: .02rem">抵</span>
-                    <span>￥</span>
-                    <span class="discount">{{one.discount || 2000}}</span>
-                </div>
-            </div>
-        </card>
+        <div v-for="(one, index) in data" :key="index">
+            <router-link :to="`/decoration/${one.id}`">
+                <card >
+                    <img :src="one.url" alt="">
+                    <div class="detail">
+                        <van-row class="flex">
+                            <van-col :span="20" class="title">[特权定金]{{one.title}}</van-col>
+                            <van-col :span="4" class="comment">评论{{one.commentNum}}</van-col>
+                        </van-row>
+                        <div :class="['flex', 'zhekou']" style="text-align: right;">
+                            <span class="realIcon">￥</span>
+                            <span class="real">{{one.real || 1000}}</span>
+                            <span style="margin-left: .02rem">抵</span>
+                            <span>￥</span>
+                            <span class="discount">{{one.discount || 2000}}</span>
+                        </div>
+                    </div>
+                </card>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -34,7 +38,7 @@ export default {
         return {
             title: this.title,
             meta: [
-                { hid: 'description', name: 'description', content: 'this is posts' }
+                { hid: 'description', name: 'description', content: 'this is posts'}
             ],
 
         }
@@ -42,7 +46,7 @@ export default {
     data() {
         return {
             data: [
-                { url: '', title: '家装e站全屋整装装修套餐', commentNum: 12 }
+                { url: '', title: '家装e站全屋整装装修套餐', commentNum: 12, id:'1'  }
             ]
         }
     },
@@ -58,14 +62,14 @@ export default {
 @import "../../assets/main";
 .detail {
     padding: .3rem;
-    .flex{
+    .flex {
         display: flex;
         align-items: baseline;
-        span{
+        span {
             display: block;
         }
     }
-    .zhekou{
+    .zhekou {
         margin-top: .3rem;
         justify-content: flex-end;
     }

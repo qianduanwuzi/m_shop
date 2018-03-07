@@ -37,7 +37,7 @@ export const eight = [
 ]
 
 export const mainMenuList = [
-    { name: '首页', imgurl: sm_one, url: '' },
+    { name: '首页', imgurl: sm_one, url: '/' },
     { name: '全屋整装', imgurl: sm_two, url: 'decoration' },
     { name: '装修主材', imgurl: sm_three, url: 'material' },
     { name: '家居软装', imgurl: sm_four, url: 'mall' },

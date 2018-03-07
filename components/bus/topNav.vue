@@ -1,7 +1,12 @@
 <template>
     <div class="navBox">
         <img src="~static/decoration/icon-back.png" alt="" class="arrowLeft" @click="$router.go(-1)">
-        <div class="title">{{title}}</div>
+        <div style="flex: 2">
+            <slot>
+                <div class="title">{{title}}</div>
+            </slot>
+        </div>
+        
         <img src="~static/index/icon-menu.png" alt="" class="icon_menu" @click="show = true">
         <van-dialog v-model="show" :show-confirm-button="false" style="padding-bottom: .9rem">
             <van-row >
@@ -52,19 +57,24 @@ export default {
     align-items: center;
     padding: 0 .3rem;
     .arrowLeft{
-        width: .2rem;
+        width: .18rem;
+        justify-content: flex-start;
     }
     .title{
         text-align: center;
-        flex: 2;
+        // flex: 2;
         font-size: .36rem;
         color: #333;
     }
+    .icon_menu {
+        width: .44rem;
+        justify-content: flex-end;
+    }
 }
 
-.icon_menu {
-    width: .44rem;
-}
+// .icon_menu {
+//     width: .44rem;
+// }
 
 .closeImg{
     width: .58rem;
