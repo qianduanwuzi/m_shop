@@ -1,6 +1,7 @@
 # test-nuxt
 
-> Nuxt.js project branch dev/master
+> Nuxt.js project    
+> branch ===> dev/master
 
 ## Build Setup
 
