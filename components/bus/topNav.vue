@@ -2,11 +2,11 @@
     <div class="navBox">
         <img src="~static/decoration/icon-back.png" alt="" class="arrowLeft" @click="$router.go(-1)">
         <div style="flex: 2">
+            <!--自定义-->
             <slot>
                 <div class="title">{{title}}</div>
             </slot>
         </div>
-        
         <img src="~static/index/icon-menu.png" alt="" class="icon_menu" @click="show = true">
         <van-dialog v-model="show" :show-confirm-button="false" style="padding-bottom: .9rem">
             <van-row >
