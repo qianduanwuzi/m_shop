@@ -1,3 +1,4 @@
+const resolve = require('path').resolve
 module.exports = {
   /*
   ** Headers of the page
@@ -16,6 +17,17 @@ module.exports = {
        { src: '/msuit.js' }
     ]
   },
+  //
+  router: {
+    middleware: 'filterBusCom',
+    extendRoutes (routes) {
+      routes.push({
+        name: '/',
+        path: '*',
+        component: resolve(__dirname, 'pages/index.vue')
+      })
+    }
+  },
   /*
   ** Customize the progress bar color
   */
@@ -23,7 +35,7 @@ module.exports = {
   /*
   ** add transition/public css
   */
-  css: ['assets/main.css'],
+  css: ['assets/main.css', 'assets/_main.scss'],
   /*
   ** Build configuration
   */

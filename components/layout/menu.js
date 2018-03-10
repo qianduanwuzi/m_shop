@@ -1,14 +1,3 @@
-// eight
-import eight_one from '~/static/index/icon-all.png'
-import eight_two from '~/static/index/icon-material.png'
-import eight_three from '~/static/index/icon-homefurnish.png'
-import eight_four from '~/static/index/icon-sketch.png'
-import eight_five from '~/static/index/icon-class.png'
-import eight_six from '~/static/index/icon-case.png'
-import eight_seven from '~/static/index/icon-quote.png'
-import eight_eight from '~/static/index/icon-reserve.png'
-
-
 // slide-menu
 import sm_one from '~/static/index/icon-home.png'
 import sm_two from '~/static/index/icon-all.png'
@@ -25,32 +14,20 @@ import sm_twelve from '~/static/index/icon-p-center.png'
 
 
 
-export const eight = [
-    { name: '全屋整装', url: eight_one },
-    { name: '装修主材', url: eight_two },
-    { name: '家居软装', url: eight_three },
-    { name: '装修效果图', url: eight_four },
-    { name: '装修攻略', url: eight_five },
-    { name: '装修案例', url: eight_six },
-    { name: '免费报价', url: eight_seven },
-    { name: '预约量房', url: eight_eight },
-]
-
 export const mainMenuList = [
-    { name: '首页', imgurl: sm_one, url: '/' },
-    { name: '全屋整装', imgurl: sm_two, url: 'decoration' },
-    { name: '装修主材', imgurl: sm_three, url: 'material' },
-    { name: '家居软装', imgurl: sm_four, url: 'mall' },
-    { name: '装修效果图', imgurl: sm_five, url: 'renderings' },
-    { name: '装修攻略', imgurl: sm_six, url: 'baike' },
-    { name: '装修案例', imgurl: sm_seven, url: 'case' },
-    { name: '免费报价', imgurl: sm_eight, url: 'quote' },
-    { name: '预约量房', imgurl: sm_nine, url: 'measure' },
-    { name: '关于我们', imgurl: sm_ten, url: 'aboutus' },
-    { name: '线下体验中心', imgurl: sm_eleven, url: 'offline_store' },
-    { name: '个人中心', imgurl: sm_twelve, url: 'member' },
+  { name: '首页', imgurl: sm_one, url: '/' },
+  { name: '全屋整装', imgurl: sm_two, url: '/decoration' },
+  { name: '装修主材', imgurl: sm_three, url: '/material' },
+  { name: '家居软装', imgurl: sm_four, url: '/mall' },
+  { name: '装修效果图', imgurl: sm_five, url: '/renderings' },
+  { name: '装修攻略', imgurl: sm_six, url: '/baike' },
+  { name: '装修案例', imgurl: sm_seven, url: '/case' },
+  { name: '免费报价', imgurl: sm_eight, url: '/quote' },
+  { name: '预约量房', imgurl: sm_nine, url: '/measure' },
+  { name: '关于我们', imgurl: sm_ten, url: '/aboutus' },
+  { name: '线下体验中心', imgurl: sm_eleven, url: '/offline_store' },
+  { name: '个人中心', imgurl: sm_twelve, url: '/member' },
 ]
-
 
 
 // ---------------------- PC路由 ------------------------

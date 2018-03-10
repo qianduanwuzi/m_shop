@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { eight } from './const'
+import { eight } from './const_'
 
 export default {
     components: {

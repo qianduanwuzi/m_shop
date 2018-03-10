@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import {mainMenuList} from "./index/const"
+
+import {mainMenuList} from "./menu"
 export default {
   components: {
   },

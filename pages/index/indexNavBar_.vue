@@ -17,11 +17,10 @@
             </van-row>
         </van-dialog>
     </div>
-    </div>
 </template>
 
 <script>
-import {mainMenuList} from "./const"
+import {mainMenuList} from "~/components/layout/menu"
 export default {
 
     components: {
@@ -35,7 +34,7 @@ export default {
     data() {
         return {
             show: false,
-            mainMenuList, 
+            mainMenuList,
         }
     },
     methods: {

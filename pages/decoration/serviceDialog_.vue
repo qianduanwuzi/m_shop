@@ -9,7 +9,10 @@
           <div>
 
           </div>
+          <div>
 
+          </div>
+          <van-button size="large">确认</van-button>
         </van-dialog>
     </div>
 </template>
@@ -39,25 +42,26 @@ export default {
 
 <style lang="scss" scoped>
 .container{
+  padding: .3rem;
   .navBox{
+    height: .8rem;
     position: relative;
-    // display: flex;
-    // align-items: center;
     border-bottom: 1px solid #ddd;
     font-size: .36rem;
     color: #333;
     .arrowLeft, .backTxt, .nav{
       position: absolute;
-
+      top: 0;
     }
     .arrowLeft {
+      top: .09rem;
       width: .18rem;
     }
     .backTxt {
-      padding-left: .15rem;
+      left: .35rem;
     }
     .nav {
-
+      left: 39%;
     }
   }
 }

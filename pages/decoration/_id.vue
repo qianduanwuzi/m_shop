@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import serviceDialog from "~/components/bus/decoration/serviceDialog"
+import serviceDialog from "./serviceDialog_"
 export default {
     //   asyncData(context) {
     //     console.log('11', context)

@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import IndexNavbar from "~/components/bus/index/indexNavBar"
-import Eight from "~/components/bus/index/eight"
-import List from "~/components/bus/index/list"
-import Designer from "~/components/bus/index/desinger"
-import OfflineCenter from "~/components/bus/index/offlineCenter"
+import IndexNavbar from "./index/indexNavBar_"
+import Eight from "./index/eight_"
+import List from "./index/list_"
+import Designer from "./index/desinger_"
+import OfflineCenter from "./index/offlineCenter_"
 import img from "~/static/index/banner-index-01.png"
 import img2 from "~/static/index/banner-index-01.png"
 

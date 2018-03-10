@@ -38,10 +38,10 @@
 </template>
 
 <script>
-import ListCard from "../listCard";
+import ListCard from "~/components/card/ListCard";
 export default {
     components: {
-        ListCard
+      ListCard
     },
     props: {
         data: {
@@ -64,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../../assets/main";
+@import "../../assets/main";
 .eachBox {
     display: inline-block; // margin-left: .2rem;
     // margin-top: .2rem;
