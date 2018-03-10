@@ -13,19 +13,33 @@
         </div>
         <div class="box" style="border-bottom: 1px solid #dcdcdc">
             <div>
-                <label for="">订金</label> ￥29.9 抵 ￥2000
+                <label for="" class="deposit">订金</label>
+                <span class="symReal">￥</span>
+                <span class="real">29.9</span>
+                <span class="di">抵</span>
+                <span class="symDis">￥</span>
+                <span class="discount">2000</span>
+            </div>
+            <div class="typeBox">
                 <label for="">商品类型</label>
+                <span class="productType">{{data.productType}}</span>
             </div>
         </div>
-        <div class="box" style="border-bottom: 1px solid #dcdcdc">
-            <label for="">服务门店</label> <span>请选择></span>
+        <div :class="['box', 'service']" style="border-bottom: 1px solid #dcdcdc">
+            <label for="" @click.self="showDialog = true">服务门店</label>
+            <span class="select">请选择<span class="arrowRight" @click="showDialog = true">></span></span>
         </div>
-
+        <div class="box" style="display: flex;align-items: center">
+             <label for="">数量：</label>
+            <span class="select"><van-stepper v-model="data.num" style=""/></span>
+        </div>
+        <service-dialog :show="showDialog"></service-dialog>
         id is {{$route.params.id}}
     </div>
 </template>
 
 <script>
+import serviceDialog from "~/components/bus/decoration/serviceDialog"
 export default {
     //   asyncData(context) {
     //     console.log('11', context)
@@ -48,9 +62,10 @@ export default {
     data() {
         return {
             data: {
-                label: ' 家装e站全包装修室内设计效果图套餐整装包', des: '商品描述',
+                label: ' 家装e站全包装修室内设计效果图套餐整装包', des: '商品描述', productType: '电子抵用券', num: 1,
 
-            }
+            },
+            showDialog: false,
 
         }
     },
@@ -58,9 +73,12 @@ export default {
         console.log(this.$route)
     },
     methods: {
+      selectCitys() {
 
+      },
     },
     components: {
+      serviceDialog,
     }
 }
 </script>
@@ -80,8 +98,27 @@ export default {
     }
 }
 
+.service {
+    display: flex;
+    align-items: center;
+    .select{
+        font-size: .28rem;
+        flex: 2;
+        text-align: right;
+        .arrowRight{
+            margin-left: .2rem
+        }
+    }
+}
+//
 .box {
     padding: .3rem;
+    .deposit{
+        margin-right: .5rem;
+    }
+    .typeBox{
+        margin-top: .5rem;
+    }
     .label {
         font-size: .32rem;
         color: #333;
@@ -90,6 +127,34 @@ export default {
         margin-top: .2rem;
         font-size: .24rem;
         color: #666;
+    }
+    label {
+        font-size: .28rem;
+        color: #999;
+    }
+    .symReal {
+        font-size: .28rem;
+        color: #DA1A00;
+    }
+    .real {
+        color: #DA1A00;
+        font-size: .44rem;
+    }
+    .di {
+        font-size: .28rem;
+        color: #999;
+    }
+    .symDis {
+        color: #999;
+    }
+    .discount {
+        font-size: .44rem;
+        color: #999;
+    }
+    .productType {
+        color: #333;
+        font-size: .28rem;
+        margin-left: .4rem;
     }
 }
 </style>

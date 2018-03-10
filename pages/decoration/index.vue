@@ -3,7 +3,7 @@
         <top-nav title="新房整装"></top-nav>
         <div v-for="(one, index) in data" :key="index">
             <router-link :to="`/decoration/${one.id}`">
-                <card >
+                <card>
                     <img :src="one.url" alt="">
                     <div class="detail">
                         <van-row class="flex">
@@ -38,7 +38,7 @@ export default {
         return {
             title: this.title,
             meta: [
-                { hid: 'description', name: 'description', content: 'this is posts'}
+                { hid: 'description', name: 'description', content: 'this is posts' }
             ],
 
         }
@@ -46,7 +46,7 @@ export default {
     data() {
         return {
             data: [
-                { url: '', title: '家装e站全屋整装装修套餐', commentNum: 12, id:'1'  }
+                { url: '', title: '家装e站全屋整装装修套餐', commentNum: 12, id: '1' }
             ]
         }
     },

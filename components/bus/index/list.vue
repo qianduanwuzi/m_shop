@@ -19,11 +19,11 @@
             <van-row gutter="20" style="padding:.2rem;margin:0 !important;">
                 <van-col class="eachBox" span="12" v-for="(one, index) in data.softData.imgs" :key="index">
                     <!--<span class="eachBox">-->
-                        <img :src="one.src" alt="" class="img" style="width:100%">
-                        <div class="labelBox">
-                            <div class="label">{{one.label}}</div>
-                            <div class="subLabel">{{one.subLabel}}</div>
-                        </div>
+                    <img :src="one.src" alt="" class="img" style="width:100%">
+                    <div class="labelBox">
+                        <div class="label">{{one.label}}</div>
+                        <div class="subLabel">{{one.subLabel}}</div>
+                    </div>
                     <!--</span>-->
                 </van-col>
 
@@ -66,8 +66,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../../assets/main";
 .eachBox {
-    display: inline-block;
-    // margin-left: .2rem;
+    display: inline-block; // margin-left: .2rem;
     // margin-top: .2rem;
     img {
         width: 3.46rem;
