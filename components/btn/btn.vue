@@ -1,7 +1,7 @@
 <template>
-    <span :style="styles" @click="btnClick">
+    <div :style="styles" @click="btnClick" class="btn">
         {{name}}
-    </span>
+    </div>
 </template>
 
 <script>
@@ -10,7 +10,7 @@ export default {
     },
     props: {
         name: {
-            default: '',
+            default: '确认',
             type: String
         },
         styles: {
@@ -34,5 +34,7 @@ export default {
 </script>
 
 <style scoped>
-
+.btn{
+  text-align: center;
+}
 </style>
