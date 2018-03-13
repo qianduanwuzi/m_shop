@@ -7,7 +7,10 @@
                 <div class="title">{{title}}</div>
             </slot>
         </div>
-        <img src="~static/index/icon-menu.png" alt="" class="icon_menu" @click="show = true">
+        <!-- 这边以slot来控制menu显示 -->
+        <slot name="right">
+          <img src="~static/index/icon-menu.png" alt="" class="icon_menu" @click="show = true">
+        </slot>
         <van-dialog v-model="show" :show-confirm-button="false" style="padding-bottom: .9rem">
             <van-row >
                 <van-col span="24" style="position: relative"><img src="~static/index/icon-close.png" alt=""  class="closeImg" @click="show = false"></van-col>
