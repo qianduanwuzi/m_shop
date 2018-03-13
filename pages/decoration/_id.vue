@@ -39,7 +39,8 @@
 </template>
 
 <script>
-import serviceDialog from "./serviceDialog_"
+import serviceDialog from "./serviceDialog_";
+import api from "~/fetch/api";
 export default {
     //   asyncData(context) {
     //     console.log('11', context)
@@ -70,7 +71,9 @@ export default {
         }
     },
     mounted: function() {
-        console.log(this.$route)
+        // console.log(this.$route)
+        // api.get("mall/sub/sub-list?status=1").then(res => {})
+
     },
     methods: {
       selectCitys() {
