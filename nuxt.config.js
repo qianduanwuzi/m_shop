@@ -1,41 +1,47 @@
-const resolve = require('path').resolve
+const resolve = require("path").resolve;
 module.exports = {
   /*
   ** Headers of the page
   */
   head: {
-    title: 'test-nuxt',
+    title: "test-nuxt",
     meta: [
-      { charset: 'utf-8' },
+      { charset: "utf-8" },
       //  { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: "description", name: "description", content: "Nuxt.js project" }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-       { src: '/msuit.js' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    script: [{ src: "/msuit.js" }]
   },
+  modules: ["@nuxtjs/axios", "@nuxtjs/proxy"],
+  proxy: [
+    [
+      "/api",
+      {
+        target: "http://172.20.7.111:8082/", // 代理后端
+        pathRewrite: { "^/api": "" }
+      }
+    ]
+  ],
   //
   router: {
-    middleware: 'filterBusCom',
-    extendRoutes (routes) {
+    middleware: "filterBusCom",
+    extendRoutes(routes) {
       routes.push({
-        name: '/',
-        path: '*',
-        component: resolve(__dirname, 'pages/index.vue')
-      })
+        name: "/",
+        path: "*",
+        component: resolve(__dirname, "pages/index.vue")
+      });
     }
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: "#3B8070" },
   /*
   ** add transition/public css
   */
-  css: ['assets/main.css', 'assets/_main.scss'],
+  css: ["assets/main.css", "assets/_main.scss"],
   /*
   ** Build configuration
   */
@@ -55,9 +61,9 @@ module.exports = {
     // }
   },
   plugins: [
-    { src: '~plugins/fastclick', ssr: false},
+    { src: "~plugins/fastclick", ssr: false },
     // { src: '~plugins/pickers', ssr: false},
-    { src: '~plugins/components'},
-    { src: '~plugins/vant'},
+    { src: "~plugins/components" },
+    { src: "~plugins/vant" }
   ]
-}
+};

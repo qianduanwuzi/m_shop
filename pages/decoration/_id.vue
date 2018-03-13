@@ -27,14 +27,14 @@
         </div>
         <div :class="['box', 'service']" style="border-bottom: 1px solid #dcdcdc">
             <label for="" @click.self="showDialog = true">服务门店</label>
-            <span class="select">请选择<span class="arrowRight" @click="showDialog = true">></span></span>
+            <span class="select" @click="showDialog = true">请选择<span class="arrowRight" @click="showDialog = true">></span></span>
         </div>
         <div class="box" style="display: flex;align-items: center">
              <label for="">数量：</label>
             <span class="select"><van-stepper v-model="data.num" style=""/></span>
         </div>
         <service-dialog :show="showDialog"></service-dialog>
-        id is {{$route.params.id}}
+        <!-- id is {{$route.params.id}} -->
     </div>
 </template>
 
@@ -72,7 +72,7 @@ export default {
     },
     mounted: function() {
         // console.log(this.$route)
-        // api.get("mall/sub/sub-list?status=1").then(res => {})
+        // api.get("/api/mall/sub/sub-list?status=1").then(res => {})
 
     },
     methods: {
