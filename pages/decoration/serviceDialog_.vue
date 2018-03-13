@@ -6,20 +6,20 @@
             <div class="backTxt">返回</div>
             <div class="nav">服务门店</div>
           </div>
-            <van-row class="area">
-              <van-col span="11">
-                <div class="box">
-                  <div class="name">{{province}}</div>
-                  <img src="" alt="">
-                </div>
-              </van-col>
-              <van-col span="11"  offset="2">
-                <div class="box">
-                  <div class="name">{{city}}</div>
-                  <img src="" alt="">
-                </div>
-              </van-col>
-            </van-row>
+          <van-row class="area">
+            <van-col span="11">
+              <div class="box">
+                <div class="name">{{province}}</div>
+                <img src="" alt="">
+              </div>
+            </van-col>
+            <van-col span="11"  offset="2">
+              <div class="box">
+                <div class="name">{{city}}</div>
+                <img src="" alt="">
+              </div>
+            </van-col>
+          </van-row>
           <div>
 
           </div>
@@ -53,9 +53,9 @@ export default {
 .area {
   .box {
     width: 99%;
-    line-height: .9rem;
+    line-height: 0.9rem;
     border: 1px solid #ccc;
-    border-radius: .02rem;
+    border-radius: 0.02rem;
     .name {
       font-size: 0.28rem;
       color: #999;
