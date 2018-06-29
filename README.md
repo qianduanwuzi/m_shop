@@ -1,7 +1,7 @@
 # test-nuxt
 
 > Nuxt.js project    
-> branch ===> dev/master
+> branch ===> dev/master  
 > ui ===> vant(support ssr)
 
 ## Build Setup
