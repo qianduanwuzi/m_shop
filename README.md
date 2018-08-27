@@ -4,6 +4,8 @@
 > branch ===> dev/master  
 > ui ===> vant(support ssr)
 
+# view  
+ ![image](https://github.com/qianduanwuzi/img/blob/master/gif/mshop.gif)
 ## Build Setup
 
 ``` bash
