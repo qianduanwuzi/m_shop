@@ -1,3 +1,4 @@
+# 另一nuxt已上线项目nuxt-manhua-web地址：<span id="jump">https://github.com/qianduanwuzi/nuxt-manhua-web</span>[点击跳转](#jump)
 # test-nuxt
 
 > Nuxt.js project    
