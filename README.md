@@ -1,5 +1,5 @@
 # 另一nuxt已上线项目nuxt-manhua-web地址：https://github.com/qianduanwuzi/nuxt-manhua-web</span>
-# test-nuxt
+# test-nuxt（此项目没有对页面init时异步数据友好seo，另一项目nuxt-manhua-web已做友好调整）
 
 > Nuxt.js project    
 > branch ===> dev/master  
